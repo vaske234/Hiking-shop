@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
+:root {
+    --headings: 'Coda Caption', sans-serif;
+    --bodyFont: 'Open Sans', sans-serif;
+    --lightgray: #f6f6f6;
+    --white: #fff;
+    --black: #1e1e1e;
+    --primary: #3a8bcd;
+    --gray: #6c757d;
+    --text: #4a4a4a;
+    --borders: #eeeeee;
+    --fontSize: 16px;
+    --transition: .3s ease-in-out;
+}
+
+/******************
+    Basic styles
+******************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--bodyFont);
+    line-height: 1.6;
+    color: var(--text);
+    font-size: var(--fontSize);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings);
+}
+a {
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--primary);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    padding: 100px 0;
+}
+
+button {
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+    background: var(--primary);
+    border: none;
+    color: var(--white);
+    transition: var(--transition);
+}
+button:hover {
+    background: var(--black);
+}
+h2 {
+    font-size: 1.5rem;
+}
+h2::before {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    margin-bottom: 10px;
+}
+hr {
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+
+/******************
+    Topbar
+******************/
+
+.topbar {
+    text-align: center;
+    border-bottom: 1px solid var(--lightgray);
+    border-top: 5px solid var(--primary);
+    padding: 20px 0;
+}
+.topbar a {
+    font-size: 2rem;
+    text-shadow: 0 0 1px var(--text);
+}
+
+.topbar a:hover {
+    color: var(--text);
+}
+.topbar i {
+    color: var(--text);
+    margin-right: 10px;
+    font-size: 2.5rem;
+}
+/******************
+    Nav
+******************/
+
+nav {
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+nav ul li a {
+    color: var(--text);
+    text-transform: uppercase;
+}
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+/******************
+    Subscribe
+******************/
+
+.subscribe {
+    text-align: center;
+    background: var(--primary);
+
+}
+.subscribe h3 {
+    font-size: 1.5rem;
+}
+.subscribe p {
+    color: var(--white);
+    padding: 20px 0 30px 0;
+}
+
+.subscribe input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--white);
+}
+
+.subscribe input[type="text"] {
+    background: transparent;
+    color: var(--white);
+}
+.subscribe input[type="submit"] {
+    background: var(--white);
+}
+.subscribe input[type="submit"]:hover {
+    background: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+/******************
+    Footer
+******************/
+
+footer {
+    text-align: center;
+}
+footer h3 a {
+    font-size: 1.7rem;
+    text-shadow: 0 0 1px var(--text);
+}
+footer a:hover {
+    color: var(--text);
+}
+
+footer i {
+    color: var(--text);
+    margin-right: 10px;
+    font-size: 2.2rem;
+}
+footer nav a {
+    font-size: .8rem;
+}
+footer .icons a i {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+footer .icons a i:hover {
+    color: var(--primary);
+}
+footer article:last-child {
+    border-top: 1px solid var(--lightgray);
+    padding: 15px 0;
+}
+
+/******************
+    Header
+******************/
+
+header {
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 200px 0;
+    height: 100vh;
+}
+
+header article {
+    width: 40%;
+    background: rgba(255, 255, 255, .7);
+    margin-left: 15%;
+    padding: 40px;
+}
+
+header h1::after {
+    display: block;
+    content: "";
+    background: var(--primary);
+    height: 3px;
+    margin: 20px 0;
+    width: 40px;
+}
+
+/******************
+    Featured items
+******************/
+
+/******************
+    Products
+******************/
+.products article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.products .item {
+    flex: 0 0 23%;
+    border: 1px solid var(--borders);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+.products .item:hover {
+    border: 1px solid var(--primary);
+}
+.products .item img {
+    width: 100%;
+}
+
+/******************
+.about
+******************/
+.about article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.about article img {
+    width: 100%;
+}
+.about article div:first-child {
+    flex: 0 0 39%;
+}
+.about article div:last-child {
+    flex: 0 0 59%;
+}
+.about article div p {
+    margin-bottom: 15px;
+}
+
+/******************
+    Contact
+******************/
+.contact article {
+    display: flex;
+    justify-content: space-between;
+}
+.contact article div {
+    flex: 0 0 48%;
+}
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.contact hr {
+    margin-top: 20px;
+}
+
